@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin headersFont($size, $lineHeight, $color) {
+    font: {
+      family: 'Roboto', sans-serif;
+      size: $size;
+      weight: normal;
+    }
+    line-height: $lineHeight;
+    color: $color;
+    text-decoration: none;
+  }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.wrapper {
+  width: 500px;
+  margin: 50px auto;
+}
+
+button {
+  width: 100px;
+}
