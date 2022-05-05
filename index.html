@@ -5,10 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Form</title>
   </head>
   <body>
+    <div class="wrapper">
+      <form name="myForm" class="form" action="http://fe.it-academy.by/TestForm.php" method="post" novalidate>
+        <label for="textarea">Description</label>
+        <textarea name="textarea" id="textarea" cols="30" rows="10" maxlength="255" required></textarea>
+        <span>255 characrers left</span>
+
+        <p>Send confirmation</p>
+
+        <div>
+          <input type="radio" name="confirmation" value="yes" id="yes " required/>
+          <label for="yes">Yes</label>
+        </div>
+        <div>
+          <input type="radio" name="confirmation" value="no" id="no" />
+          <label for="no">No</label>
+        </div>
+
+        <label for="VAT">VAT</label>
+        <select name="vat" id="VAT" required>
+          <option value="" disabled selected>Choose VAT</option>
+          <option value="19">19%</option>
+          <option value="21">21%</option>
+          <option value="23">23%</option>
+          <option value="25">25%</option>
+        </select>
+
+        <label for="netto">Price netto EUR</label>
+        <input type="text" id="netto" disabled />
+        <label for="brutto">Price brutto EUR</label>
+        <input type="text" id="brutto" disabled />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
     <script src="js.js"></script>
   </body>
 </html>
