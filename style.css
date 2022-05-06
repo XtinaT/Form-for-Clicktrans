@@ -114,6 +114,7 @@ body {
   padding: 10px;
   border: solid  1px;
   border-radius: 5px;
+  text-align: center;
 }
 
 .form__netto .form__input {
@@ -122,5 +123,9 @@ body {
 
 .form__brutto .form__input {
   width: 100%;
+}
+
+.second {
+  margin-left: 20%;
 }
 /*# sourceMappingURL=style.css.map */

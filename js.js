@@ -72,7 +72,6 @@ nettoField.addEventListener(
         span.classList.remove("incorrect");
         span.textContent = null;
         bruttoField.setAttribute('placeholder', `${((+selectValue+100)/100*nettoValueInNum).toFixed(2)}`);
-
       } else {
         span.classList.add("incorrect");
         span.textContent = 'Please, input number';
@@ -97,38 +96,38 @@ function validateFormInfo(e) {
     let radio = form.elements.confirmation;
     let radioValue = radio.value;
 
-    //поле не должно быть пустым, максимальная длина введенного текста - 250 символов
-    if (textareaValue.length < 1) {
-      let span = document.querySelector(".form__description .form__span");
-      span.classList.add("incorrect");
-      span.textContent = "Text is required!";
-      textarea.focus();
-      e.preventDefault();
-    }
-    //отзывы должны быть разрешены
-    if (!radioValue) {
-      let span = document.querySelector(".form__fieldset + .form__span");
-      span.textContent = "Text is required!";
-      span.classList.add("incorrect");
-      //radio[0].scrollIntoView();
-      e.preventDefault();
-    }
+   
+    
 
-    //
-    if (!selectValue) {
+    
+    if (!nettoValue) {
+      let span = document.querySelector(".form__netto + .form__span");
+      span.textContent = "Please, input number";
+      span.classList.add("incorrect");
+      nettoField.focus();
+      e.preventDefault();
+    }
+if (!selectValue) {
       let span = document.querySelector(".form__VAT .form__span");
       span.textContent = "Text is required!";
       span.classList.add("incorrect");
       select.focus();
       e.preventDefault();
     }
-
-    //
-    if (!nettoValue) {
-      let span = document.querySelector(".form__netto + .form__span");
-      span.textContent = "Please, input number";
+   
+    if (!radioValue) {
+      let span = document.querySelector(".form__fieldset + .form__span");
+      span.textContent = "Text is required!";
       span.classList.add("incorrect");
-      nettoField.focus();
+      document.querySelector('.second').scrollIntoView();
+      e.preventDefault();
+    }
+
+    if (textareaValue.length < 1) {
+      let span = document.querySelector(".form__description .form__span");
+      span.classList.add("incorrect");
+      span.textContent = "Text is required!";
+      textarea.focus();
       e.preventDefault();
     }
   } catch (ex) {
