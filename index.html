@@ -14,36 +14,45 @@
   <body>
     <div class="wrapper">
       <form name="myForm" class="form" action="http://fe.it-academy.by/TestForm.php" method="post" novalidate>
-        <label for="textarea">Description</label>
-        <textarea name="textarea" id="textarea" cols="30" rows="10" maxlength="255" required></textarea>
-        <span>255 characrers left</span>
-
-        <p>Send confirmation</p>
-
-        <div>
-          <input type="radio" name="confirmation" value="yes" id="yes " required/>
-          <label for="yes">Yes</label>
+        <div class="form__description">
+        <label for="textarea" class="form__label">Description</label><br/>
+        <textarea name="textarea" class="form__textarea" id="textarea" cols="30" rows="6" maxlength="255" required></textarea><br/>
+        <span class="form__span">255 characrers left</span>
         </div>
-        <div>
-          <input type="radio" name="confirmation" value="no" id="no" />
-          <label for="no">No</label>
-        </div>
+<fieldset class="form__fieldset">
+        <legend class="form__p">Send confirmation</legend>
 
-        <label for="VAT">VAT</label>
-        <select name="vat" id="VAT" required>
-          <option value="" disabled selected>Choose VAT</option>
-          <option value="19">19%</option>
-          <option value="21">21%</option>
-          <option value="23">23%</option>
-          <option value="25">25%</option>
+        <div class="form__confirmation">
+          <input type="radio" class="form__input" name="confirmation" value="yes" id="yes " required/>
+          <label for="yes" class="form__label">Yes</label>
+          <input type="radio" class="form__input" name="confirmation" value="no" id="no" />
+          <label for="no" class="form__label">No</label>
+        </div>
+        
+</fieldset>
+<span class="form__span"></span>
+<div class="form__VAT">
+        <label for="VAT" class="form__label">VAT</label><br/>
+        <select name="vat" class="form__select inactive" id="VAT" required>
+          <option class="form__option" value="" disabled selected>Choose VAT</option>
+          <option class="form__option" value="19">19%</option>
+          <option class="form__option" value="21">21%</option>
+          <option class="form__option" value="23">23%</option>
+          <option class="form__option" value="25">25%</option>
         </select>
-
-        <label for="netto">Price netto EUR</label>
-        <input type="text" id="netto" disabled />
-        <label for="brutto">Price brutto EUR</label>
-        <input type="text" id="brutto" disabled />
-
-        <button type="submit">Submit</button>
+        <span class="form__span"></span>
+      </div>
+        <div class="form__netto">
+        <label for="netto" class="form__label">Price netto EUR</label><br/>
+        <input type="text" class="form__input" id="netto" disabled />
+        </div>
+        <span class="form__span"></span>
+        <div class="form__brutto">
+        <label for="brutto" class="form__label">Price brutto EUR</label><br/>
+        <input type="text" class="form__input" id="brutto" disabled />
+        <span class="form__span"></span>
+      </div>
+        <button type="submit" class="form__button">Submit</button>
       </form>
     </div>
 

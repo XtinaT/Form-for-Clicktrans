@@ -3,28 +3,98 @@
   padding: 0;
 }
 
-@mixin headersFont($size, $lineHeight, $color) {
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+$brandColorOrange: #ff7100;
+$brandColorOrangeLight: #ff9b4d;
+$brandColorGreen: #0ca09a;
+
+@mixin font($size, $color) {
     font: {
       family: 'Roboto', sans-serif;
       size: $size;
       weight: normal;
     }
-    line-height: $lineHeight;
     color: $color;
     text-decoration: none;
   }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
+  @include font(2rem, black);
 }
 
 .wrapper {
   width: 500px;
   margin: 50px auto;
+  padding: 50px 75px 30px;
+  border: solid $brandColorOrange 3px;
+  border-radius: 10px;
 }
 
-button {
+.form__button {
   width: 100px;
+  align-self: center;
+  background-color: $brandColorOrange;
+  @include font(1.5rem, white);
+  border: solid $brandColorOrange 1px;
+  border-radius: 5px;
+  padding:5px 10px;
+  margin-top:30px;
+    &:hover {
+      background-color: $brandColorOrangeLight;
+      border: solid $brandColorOrangeLight 1px;
+    }
+}
+
+.form__span {
+  @include font(1.2rem, $brandColorGreen);
+}
+
+.incorrect {
+  color: $brandColorOrange;
+}
+
+.form__select {
+  @include font(2rem, black);
+  width:100%;
+}
+.inactive {
+  @include font(2rem, grey); 
+}
+
+.form__option, .form__input {
+  @include font(2rem, black);
+}
+
+.form__textarea {
+  border-radius: 5px;
+  width:100%;
+}
+
+.form__option:hover {
+  background-color: lightgrey;
+}
+
+.form__fieldset {
+  padding:10px;
+  border:solid  1px;
+  border-radius: 5px;
+}
+
+.form__netto .form__input {
+  width:100%;
+}
+
+.form__brutto .form__input {
+  width:100%;
 }

@@ -3,7 +3,16 @@
   padding: 0;
 }
 
-form {
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,15 +20,101 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 5px;
+  gap: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: black;
+  text-decoration: none;
 }
 
 .wrapper {
   width: 500px;
   margin: 50px auto;
+  padding: 50px 75px 30px;
+  border: solid #ff7100 3px;
+  border-radius: 10px;
 }
 
-button {
+.form__button {
   width: 100px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #ff7100;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: white;
+  text-decoration: none;
+  border: solid #ff7100 1px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 30px;
+}
+
+.form__button:hover {
+  background-color: #ff9b4d;
+  border: solid #ff9b4d 1px;
+}
+
+.form__span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #0ca09a;
+  text-decoration: none;
+}
+
+.incorrect {
+  color: #ff7100;
+}
+
+.form__select {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: black;
+  text-decoration: none;
+  width: 100%;
+}
+
+.inactive {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: grey;
+  text-decoration: none;
+}
+
+.form__option, .form__input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: black;
+  text-decoration: none;
+}
+
+.form__textarea {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.form__option:hover {
+  background-color: lightgrey;
+}
+
+.form__fieldset {
+  padding: 10px;
+  border: solid  1px;
+  border-radius: 5px;
+}
+
+.form__netto .form__input {
+  width: 100%;
+}
+
+.form__brutto .form__input {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
