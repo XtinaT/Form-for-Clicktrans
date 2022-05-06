@@ -15,6 +15,7 @@ body {
 $brandColorOrange: #ff7100;
 $brandColorOrangeLight: #ff9b4d;
 $brandColorGreen: #0ca09a;
+$tablet-width: 768px;
 
 @mixin font($size, $color) {
     font: {
@@ -25,6 +26,12 @@ $brandColorGreen: #0ca09a;
     color: $color;
     text-decoration: none;
   }
+
+  @mixin media-tablet {
+    @media (max-width: 767.9px) {
+      @content;
+    }
+  } 
 
 .form {
   display: flex;
@@ -39,6 +46,10 @@ $brandColorGreen: #0ca09a;
   padding: 50px 75px 30px;
   border: solid $brandColorOrange 3px;
   border-radius: 10px;
+
+  @include media-tablet(){
+    width:50%;
+  }
 }
 
 .form__button {
