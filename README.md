@@ -13,7 +13,7 @@ Client-side validation is made with the help of:
   + Attribute 'max-length' specifies the maximum number of characters allowed in the <textarea> element.
 * JavaScript validation:
   + prevents sending invalid data to server;
-  + listen to fields value change;
+  + listens to fields value change;
   + dynamically shows messages to user describing validation constrains;
   + implemented with a help of Event Listeners and the function validateFormInfo;
 
