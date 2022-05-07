@@ -20,7 +20,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 15px;
+  gap: 5px;
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   font-weight: normal;
@@ -70,6 +70,8 @@ body {
   font-weight: normal;
   color: #0ca09a;
   text-decoration: none;
+  min-width: 1px;
+  height: 17px;
 }
 
 .incorrect {
@@ -127,5 +129,33 @@ body {
 
 .second {
   margin-left: 20%;
+}
+
+.hiddenElement {
+  width: 30%;
+  margin: 50px auto;
+  padding: 30px;
+  border: solid #ff7100 3px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: grey;
+  text-decoration: none;
+}
+
+@media (max-width: 767.9px) {
+  .hiddenElement {
+    width: 50%;
+  }
+}
+
+.hiddenElement img {
+  width: 200px;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,6 +12,7 @@
     <title>Form</title>
   </head>
   <body>
+    <div class="hiddenElement hidden"><img src="tick2.png" alt="green tick"><h3>Thank you!</h3><p>Your submission has been sent!</p></div>
     <div class="wrapper">
       <form name="myForm" class="form" action="http://fe.it-academy.by/TestForm.php" method="POST" novalidate>
         <div class="form__description">
@@ -23,9 +24,9 @@
         <legend class="form__p">Send confirmation</legend>
 
         <div class="form__confirmation">
-          <input type="radio" class="form__input" name="confirmation" value="yes" id="yes " required/>
+          <input type="radio" class="form__input" name="confirmation" value="true" id="yes" required/>
           <label for="yes" class="form__label">Yes</label>
-          <input type="radio" class="form__input second" name="confirmation" value="no" id="no" />
+          <input type="radio" class="form__input second" name="confirmation" value="false" id="no" />
           <label for="no" class="form__label">No</label>
         </div>
         
@@ -40,16 +41,16 @@
           <option class="form__option" value="23">23%</option>
           <option class="form__option" value="25">25%</option>
         </select>
-        <span class="form__span"></span>
       </div>
+      <span class="form__span"></span>
         <div class="form__netto">
         <label for="netto" class="form__label">Price netto EUR</label><br/>
-        <input type="text" class="form__input" id="netto" disabled />
+        <input type="text" class="form__input" id="netto" name="netto" disabled />
         </div>
         <span class="form__span"></span>
         <div class="form__brutto">
         <label for="brutto" class="form__label">Price brutto EUR</label><br/>
-        <input type="text" class="form__input" id="brutto" disabled />
+        <input type="text" class="form__input" id="brutto"  name="brutto" disabled />
         <span class="form__span"></span>
       </div>
         <button type="submit" class="form__button">Submit</button>

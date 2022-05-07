@@ -15,6 +15,7 @@ body {
 $brandColorOrange: #ff7100;
 $brandColorOrangeLight: #ff9b4d;
 $brandColorGreen: #0ca09a;
+$brandColorLightGreen: #1bbb43;
 $tablet-width: 768px;
 
 @mixin font($size, $color) {
@@ -36,7 +37,7 @@ $tablet-width: 768px;
 .form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
   @include font(2rem, black);
 }
 
@@ -69,6 +70,8 @@ $tablet-width: 768px;
 
 .form__span {
   @include font(1.2rem, $brandColorGreen);
+  min-width: 1px;
+  height:17px;
 }
 
 .incorrect {
@@ -113,4 +116,26 @@ $tablet-width: 768px;
 
 .second {
   margin-left:20%;
+}
+
+.hiddenElement {
+  width: 30%;
+  margin: 50px auto;
+  padding:30px;
+  border: solid $brandColorOrange 3px;
+  border-radius: 10px;
+  text-align: center;
+  @include font(2rem, grey);
+  
+  @include media-tablet(){
+    width:50%;
+  }
+
+  img {
+    width:200px;
+  }
+}
+
+.hidden {
+  display:none;
 }
