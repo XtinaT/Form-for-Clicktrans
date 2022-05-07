@@ -8,6 +8,7 @@ let select = document.querySelector(".form__select");
 let selectValue = select.value;
 let nettoField = document.querySelector('.form__netto .form__input');
 let nettoValue = nettoField.value;
+let nettoValueInNum = parseFloat(nettoValue.replace(',', '.'));
 let bruttoField = document.querySelector('.form__brutto .form__input');
 textarea.addEventListener(
   "input",
@@ -65,7 +66,7 @@ nettoField.addEventListener(
     nettoValue = nettoField.value;
     if (nettoValue.length > 0) {
       let span = document.querySelector(".form__netto + .form__span");
-      let nettoValueInNum = parseFloat(nettoValue.replace(',', '.'));
+      nettoValueInNum = parseFloat(nettoValue.replace(',', '.'));
       console.log(nettoValueInNum);
       if(!isNaN(nettoValueInNum)&&nettoValueInNum>0) {
         console.log('число');
@@ -100,13 +101,14 @@ function validateFormInfo(e) {
     
 
     
-    if (!nettoValue) {
+    if (!nettoValue||isNaN(nettoValueInNum)||nettoValueInNum<=0) {
+      console.log(nettoValueInNum);
       let span = document.querySelector(".form__netto + .form__span");
       span.textContent = "Please, input number";
       span.classList.add("incorrect");
       nettoField.focus();
       e.preventDefault();
-    }
+    } 
 if (!selectValue) {
       let span = document.querySelector(".form__VAT .form__span");
       span.textContent = "Text is required!";
