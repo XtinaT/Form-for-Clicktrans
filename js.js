@@ -69,8 +69,8 @@ nettoField.addEventListener(
   "input",
   () => {
     nettoValue = nettoField.value;
+    let span = document.querySelector(".form__netto + .form__span");
     if (nettoValue.length > 0) {
-      let span = document.querySelector(".form__netto + .form__span");
       nettoValueInNum = parseFloat(nettoValue.replace(',', '.'));
       if(!isNaN(nettoValueInNum)&&nettoValueInNum>0) {
         span.classList.remove("incorrect");
@@ -84,6 +84,7 @@ nettoField.addEventListener(
     } else {
       span.classList.add("incorrect");
       span.textContent = 'Please, input number';
+      bruttoField.setAttribute('value', 0);
     }
   },
   false
