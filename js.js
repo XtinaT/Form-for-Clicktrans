@@ -93,7 +93,7 @@ function sendForm(e) {
   e = e || window.event;
   e.preventDefault();
   let form = document.forms[0];
-  validateFormInfo()?alert('Validation failed'):sendAllowded();
+  validateFormInfo()?console.log('Validation failed'):sendAllowded();
 }
 
 function sendAllowded() {
