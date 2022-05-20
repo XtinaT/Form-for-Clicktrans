@@ -25,7 +25,7 @@ Client-side validation is made with the help of:
 
 
   If the request succeeds, the user can see a congratulation message instead of a form.
-  If the request fails, the user can see an error message that suggests trying one again.
+  If the request fails, the user can see an error message that suggests trying once again.
 
 
 
